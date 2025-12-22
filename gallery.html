@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aroced | Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <!-- GALLERY SECTION  -->
+    <section id="gallery" class="py-5" style="background: var(--almond)">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold" style="color: var(--coffee)">
+          Travel Gallery
+        </h2>
+        <p class="text-center mb-4" style="color: var(--muted)">
+          Browse through some of our favourite moments from beaches, cities and
+          nature escapes.
+        </p>
+
+        <!-- FILTER BUTTONS -->
+        <div class="d-flex justify-content-center mb-4 gap-2">
+          <button
+            class="btn btn-outline-dark btn-sm active-filter"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button class="btn btn-outline-dark btn-sm" data-filter="beach">
+            Beaches
+          </button>
+          <button class="btn btn-outline-dark btn-sm" data-filter="city">
+            Cities
+          </button>
+          <button class="btn btn-outline-dark btn-sm" data-filter="nature">
+            Nature
+          </button>
+        </div>
+
+        <!-- MASONRY GRID -->
+        <div class="masonry" id="masonryGrid">
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-1.png"
+              loading="lazy"
+              alt="Beach"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="city" data-aos="fade-up">
+            <img
+              src="assets/city-1.png"
+              loading="lazy"
+              alt="City"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="nature" data-aos="fade-up">
+            <img
+              src="assets/nature-1.png"
+              loading="lazy"
+              alt="Nature"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-2.png"
+              loading="lazy"
+              alt="Beach 2"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="city" data-aos="fade-up">
+            <img
+              src="assets/city-2.png"
+              loading="lazy"
+              alt="City 2"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="nature" data-aos="fade-up">
+            <img
+              src="assets/nature-2.png"
+              loading="lazy"
+              alt="Nature 2"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="city" data-aos="fade-up">
+            <img
+              src="assets/city-3.png"
+              loading="lazy"
+              alt="City 3"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-3.png"
+              loading="lazy"
+              alt="Beach 3"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="nature" data-aos="fade-up">
+            <img
+              src="assets/nature-3.png"
+              loading="lazy"
+              alt="Nature 2"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="masonry-item" data-category="nature" data-aos="fade-up">
+            <img
+              src="assets/nature-4.png"
+              loading="lazy"
+              alt="Nature 2"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-2.png"
+              loading="lazy"
+              alt="Beach 2"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-3.png"
+              loading="lazy"
+              alt="Beach 3"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="masonry-item" data-category="beach" data-aos="fade-up">
+            <img
+              src="assets/beach-2.png"
+              loading="lazy"
+              alt="Beach 2"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="city" data-aos="fade-up">
+            <img
+              src="assets/city-1.png"
+              loading="lazy"
+              alt="City"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="masonry-item" data-category="city" data-aos="fade-up">
+            <img
+              src="assets/city-2.png"
+              loading="lazy"
+              alt="City 3"
+              class="img-fluid rounded"
+            />
+          </div>
+
+          <div class="masonry-item" data-category="nature" data-aos="fade-up">
+            <img
+              src="assets/nature-3.png"
+              loading="lazy"
+              alt="Nature 2"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div
+          class="modal-content"
+          style="background: transparent; border: none"
+        >
+          <div class="modal-body text-center position-relative">
+            <!-- PREVIOUS BUTTON -->
+            <button
+              id="prevBtn"
+              class="btn position-absolute top-50 start-0 translate-middle-y lightbox-btn"
+              style="
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                border-radius: 50%;
+              "
+            >
+              ‹
+            </button>
+
+            <!-- IMAGE -->
+            <img
+              id="lightboxImage"
+              class="img-fluid rounded"
+              src=""
+              alt="Preview"
+            />
+
+            <!-- NEXT BUTTON -->
+            <button
+              id="nextBtn"
+              class="btn position-absolute top-50 end-0 translate-middle-y lightbox-btn"
+              style="
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                border-radius: 50%;
+              "
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Global Script  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
